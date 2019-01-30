@@ -8,7 +8,7 @@
 
 FROM java:8-jre
 
-MAINTAINER dan.isla@gmail.com
+MAINTAINER TheUltimateC0der@haveso.me
 
 ENV DEBIAN_FRONTEND noninteractive
 
