@@ -4,16 +4,20 @@
 #   -p 4040:4040 \
 #   -v /mnt/subsonic:/opt/app/state \
 #   -v /mnt/music:/mnt/music
-#   danisla/subsonic 1000
+#   theultimatec0der/subsonic 1000
 
 FROM java:8-jre
-
 MAINTAINER TheUltimateC0der@haveso.me
+
+ARG SUBSONIC_VERSION
 
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
   apt-utils xz-utils sudo locales
+  
+
+RUN export SUBSONIC_VERSION=$SUBSONIC_VERSION
 
 ENV LANGUAGE en_US.UTF-8
 ENV LANG en_US.UTF-8
