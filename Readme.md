@@ -1,5 +1,6 @@
 # Tags and Dockerfiles
-- `6.1.3`, `latest`, ([Dockerfile](https://github.com/danisla/dockerfiles/blob/subsonic-6.1.3/subsonic/Dockerfile))
+- `6.1.5`, `latest`, ([Dockerfile](https://github.com/danisla/dockerfiles/blob/subsonic-6.1.3/subsonic/Dockerfile))
+- `6.1.3`, ([Dockerfile](https://github.com/danisla/dockerfiles/blob/subsonic-6.1.3/subsonic/Dockerfile))
 - `6.1.2`, ([Dockerfile](https://github.com/danisla/dockerfiles/blob/subsonic-6.1.2/subsonic/Dockerfile))
 - `6.1.1`, ([Dockerfile](https://github.com/danisla/dockerfiles/blob/subsonic-6.1.1/subsonic/Dockerfile))
 - `6.0.beta2`, ([Dockerfile](https://github.com/danisla/dockerfiles/blob/subsonic-6.0.beta2/subsonic/Dockerfile))
@@ -32,7 +33,7 @@ docker run -d --name subsonic \
   -e ${SUBSONIC_CONTEXT_PATH:-/} \
   -v /mnt/subsonic:/opt/app/state \
   -v /mnt/music:/mnt/music
-  danisla/subsonic 1000 1000
+  theultimatecoder/subsonic 1000 1000
 ```
 ---
 
@@ -53,3 +54,7 @@ Set this to a context path if you are running subsonic behind a proxy and it is 
 ### SUBSONIC_MAX_MEMORY
 
 Set the max memory for the JVM, you will probably have to increase this if you have a large music library. Default is 512 (megabytes).
+
+### SUBSONIC_ADDITIONAL
+
+Can be used to utilize additional command line parameters like `--db=<JDBC URL>`
